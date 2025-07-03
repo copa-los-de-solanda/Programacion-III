@@ -2,7 +2,11 @@ import { Injectable } from '@nestjs/common';
 
 @Injectable()
 export class AppService {
-  getHello(): string {
-    return 'Hello World con NestJS modificamos!';
+  getHealth(): { service: string; version: string, status: boolean } {
+    return {
+      service: 'nestjs-blog-backend-api',
+      version: '0.0.3',
+      status: true,
+    };
   }
 }
